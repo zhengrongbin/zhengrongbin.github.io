@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rongbin Zheng – CV</title>
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    :root { --primary: #0066cc; --secondary: #e0f7fa; --accent: #ff6f61; --light: #f9f9f9; --dark: #333; --radius: 12px; --transition: 0.3s ease; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 40px 20px; text-align: center; position: relative; }
+    header .headshot { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; position: absolute; top: 20px; right: 20px; }
+    header h1 { font-size: 3rem; letter-spacing: 1px; }
+    header p { font-size: 1.2rem; opacity: 0.9; margin-top: 8px; }
+    header .contact { margin-top: 15px; }
+    header .contact a { color: #fff; text-decoration: underline; margin: 0 10px; font-weight: 600; }
+    nav.tabs { background: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    nav.tabs ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
+    nav.tabs li { margin: 0 10px; }
+    nav.tabs button { background: none; border: none; padding: 12px 16px; font-size: 0.9rem; font-weight: 600; color: var(--dark); cursor: pointer; transition: color var(--transition); }
+    nav.tabs button.active, nav.tabs button:hover { color: var(--primary); }
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .section-card { display: none; background: #fff; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 30px; animation: fadeIn 0.6s ease forwards; opacity: 0; }
+    .section-card.active { display: block; }
+    .section-card h2 { position: relative; font-size: 1.8rem; margin-bottom: 20px; }
+    .section-card h2::after { content: ''; position: absolute; width: 50px; height: 4px; background: var(--accent); border-radius: 2px; bottom: -8px; left: 0; }
+    .timeline { position: relative; margin-left: 20px; }
+    .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 4px; background: var(--secondary); border-radius: 2px; }
+    .timeline-item { position: relative; margin-bottom: 20px; padding-left: 30px; }
+    .timeline-item::before { content: '\f111'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; top: 3px; background: var(--primary); color: #fff; border-radius: 50%; width: 16px; height: 16px; text-align: center; line-height: 16px; }
+    .publications ol { margin-left: 20px; list-style-position: inside; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @media (max-width: 768px) { nav.tabs ul { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="headshot.jpg" alt="Headshot" class="headshot">
+    <h1>Rongbin Zheng</h1>
+    <p>Research Fellow, Boston Children’s Hospital / Harvard Medical School</p>
+    <div class="contact">
+      <a href="mailto:Rongbin.Zheng@childrens.harvard.edu"><i class="fas fa-envelope"></i> Rongbin.Zheng@childrens.harvard.edu</a>
+      <a href="https://github.com/zhengrongbin" target="_blank"><i class="fab fa-github"></i> github.com/zhengrongbin</a>
+      <a href="https://scholar.google.com/citations?user=wuR7oA4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <ul>
+      <li><button class="active" data-target="home"><i class="fas fa-home"></i> Home</button></li>
+      <li><button data-target="background"><i class="fas fa-flask"></i> Contribution to Science</button></li>
+      <li><button data-target="publications"><i class="fas fa-book-open"></i> Publications</button></li>
+      <li><button data-target="tools"><i class="fas fa-code"></i> Software & Tools</button></li>
+      <li><button data-target="awards"><i class="fas fa-award"></i> Honors & Awards</button></li>
+      <!-- <li><button data-target="teaching"><i class="fas fa-chalkboard-teacher"></i> Teaching</button></li> -->
+      <li><button data-target="presentations"><i class="fas fa-microphone"></i> Presentations</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section-card active">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>I am a postdoc in bioinformatics, gene regulation, adipose biology, and single-cell biology at Boston Children's Hospital / Jolsin Diabetes Center / Harvard Medical School, under the supervision of Dr. Kaifu Chen and co-mentored by Dr. Yu-Hua Tseng. My Ph.D. was trained in Bioinformatics at Tongji University, advised by Drs. X. Shirley Liu and Xiaoyan Zhang. During my Ph.D., I was working on genomics data integration using large scale of ChIP-seq and chromatin accessibility. We developed CistromeDB and Toolkit that has been cited by over 1,200 publications and 500,000 visits worldwide as of May 2025.</p>
+      <br>
+      <p>In my postdoctoral research, I apply my expertise in transcriptional and epigenetic regulation to probe the mechanisms of cell-cell communication and cell identity, enhancing my skillset with single- cell RNA-seq, spatial transcriptiomics, and genomics data analysis. I have developed MEBOCOST, the first tool in the field explicitly designed to analyze metabolite-mediated intercellular communications using tissue single-cell RNA-seq data. Beyond metabolite ligands, my colleagues and I have reported the first comprehensive picture of protein ligand-mediated intercellular communication in the mouse thermogenic adipose niche. Meanwhile, I collaborate with experimental biologists to unravel the epigenetic and transcriptional regulatory mechanisms underlying adipocyte thermogenesis, endothelial cells, and cardiovascular disease.</p>
+      <br>
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="timeline">
+        <div class="timeline-item"><span>09/2011 – 06/2015</span> B.S. Biology Science, Shandong Normal University</div>
+        <div class="timeline-item"><span>09/2015 – 05/2020</span> Ph.D. Bioinformatics, Tongji University</div>
+      </div>
+      <h2><i class="fas fa-graduation-cap"></i> Experience</h2>
+      <div>
+        <div class="timeline-item"><span>2021 – Present</span> Postdoctoral Research Fellow, Boston Children’s Hospital</div>
+        <div class="timeline-item"><span>2020 – 2021</span> Bioinformatics Engineer, GV20 Therapeutics, Inc.</div>
+        <div class="timeline-item"><span>2018 – 2019</span> Visiting Scholar, Dana-Farber Cancer Institute</div>
+      </div>
+    </section>
+    <!-- contribution to science -->
+    <section id='background' class="section-card background">
+      <h2><i class="fas fa-flask"></i> Contributions to Science</h2>
+      <ul>
+        <li><b>Develop computational tools for human and mouse genomic data analysis using a compendium of ChIP-seq and chromatin accessibility data:</b></li> 
+        <p>My graduate research was focused on developing bioinformatic resources and tools to facilitate understanding of gene transcriptional and epigenetic regulation. Transcription factors (TFs) are crucial in gene regulation, binding to specific DNA regions to control gene transcription rates. Their complex mechanisms include modifying nucleosomes, altering histone structures, and recruiting or removing protein complexes. Cistromes provide a detailed mapping of these binding sites, aiding our understanding of gene regulation. The challenge lies in comprehensively mapping these cistromes given that there are over 1,600 TFs in humans and mice, which vary according to cell type. Technologies like ChIP-seq, DNase-seq, and ATAC-seq aid in this mapping process, with extensive data from these experiments available publicly. The Cistrome Data Browser (DB) efficiently extracts and provides access to this information. In addition to the data browser, we also created the Cistrome DB Toolkit, a web service designed to swiftly identify transcriptional regulators that target specific genes or bind to genomic intervals or peak sets. Despite similar databases, Cistrome DB's depth, quality control, and analytical capabilities stand out. The Cistrome DB and Toolkit have collectively been cited over 900 times and collected over 400,000 visits, indicating their broad impact on the community.  </p>
+        <br>
+        <div style="padding-left: 50px;">
+          <p>a.  <b>Zheng R#</b>, Wan C#, Mei S, Qin Q, Wu Q, Sun H, Chen CH, Brown M, Zhang X*, Meyer CA*, Liu XS*. Cistrome Data Browser: expanded datasets and new tools for gene regulatory analysis. Nucleic Acids Res. 2019 Jan 8;47(D1):D729-35. PMCID: PMC6324081</p>
+          <p>b.  <b>Zheng R#</b>, Dong X#, Wan C, Shi X, Zhang X, Meyer CA. Cistrome Data Browser and Toolkit: analyzing human and mouse genomic data using compendia of ChIP-seq and chromatin accessibility data. Quantitative Biology. 2020 Sep;8:267-76.</p>
+          <p>c.  Mei S, Qin Q, Wu Q, Sun H, <b>Zheng R</b>, Zang C, Zhu M, Wu J, Shi X, Taing L, Liu T. Cistrome Data Browser: a data portal for ChIP-Seq and chromatin accessibility data in human and mouse. Nucleic Acids Research. 2016 Oct 25:gkw983. PMCID: PMC5210658</p>
+        </div>
+        <br>
+        <li><b>Develop the first sophisticated algorithm for single-cell metabolite-mediated intercellular communications:</b></li>
+        <p>As a postdoctoral fellow, I take full advantage of computational approaches and biological knowledge to build links between cellular metabolism and cell-cell communications in cell identity regulation. Single-cell technologies offer unprecedented opportunities to study interactions between different cell types within a tissue. Although existing algorithms like CellPhoneDB and CellChat allow for protein-based cell communication inference using single-cell RNA-seq data, they largely overlook the role of metabolites as signaling molecules. To address this gap, we developed MEBOCOST, a computational method that quantitatively infers metabolite-mediated intercellular communications using single-cell RNA-seq data. This innovative algorithm identifies communications where metabolites, such as lipids, are secreted by sender cells and interact with sensor proteins in receiver cells. These sensor proteins can be cell surface receptors, membrane transporters, or nuclear receptors. Brown adipose tissue (BAT) is metabolically specialized to dissipate chemical energy in the form of heat in thermogenesis. Therapeutical activation of BAT is recognized as a promising method to combat obesity and metabolic diseases including type 2 diabetes, cardiovascular diseases, and other diabetic complications. We successfully applied MEBOCOST to mouse brown adipose tissue (BAT), recapturing known metabolite-mediated communications and identifying new ones. Additionally, MEBOCOST revealed a set of temperature-regulated intercellular metabolite-sensor communications in BAT. The tool has been rapidly adopted by researchers worldwide, including 14,797 abstract readings and ~7,000 full-text readings of our release to bioRxiv (now received comments from Nature Methods). Meanwhile, we have received contact from 24 third-party researchers discussing the application of MEBOCOST in their research. Additionally, the bioRxiv manuscript has been cited by 36 publications since June 2023. </p>
+        <br>
+        <div style="padding-left: 50px;">
+          <p>a.  <b>Zheng R#</b>, Zhang Y#, Tsuji T, Gao X, Shamsi F, Wagner A, Yosef N, Chen H, Zhang L, Tseng YH, Chen K. MEBOCOST: Metabolite-mediated Cell Communication Modeling by Single Cell Transcriptome. NAR (2022 Accepted). doi: https://doi.org/10.1101/2022.05.30.494067</p>
+        </div>
+        <br>
+        <li><b>Unveil protein ligand-receptor interactions in thermogenic adipose tissue niche:</b></li> 
+        <p>In cold environments, brown adipose tissue (BAT) undergoes significant changes, including the number and function of brown adipocytes, blood vessels, nerves, and immune cells. To unveil this cellular communication in BAT, we applied the CellChat algorithm to single-cell RNA-seq data from mouse BAT samples. This analysis revealed a comprehensive network of interactions among various cell types in BAT and identified the major signaling inputs and outputs of each cell type. A comparative study of these interactions in mice exposed to varying temperatures revealed that cold conditions amplify the intercellular crosstalk among crucial cell types, such as adipocytes, adipocyte progenitors, vascular and lymphatic endothelial cells, Schwann cells, and various immune cells. We surmise that these heightened interactions potentially govern the remodeling of the extracellular environment, modulate the immune response, stimulate the growth of blood vessels, and foster nerve development. Our findings give fresh insights into BAT's thermogenic processes and offer a foundation for further studies on BAT's growth and temperature regulation functions. </p>
+        <br>
+        <div style="padding-left: 50px;">
+          <p>a.  Shamsi F#, <b>Zheng R#</b>, Ho LL, Chen K, Tseng YH. Comprehensive analysis of intercellular communication in the thermogenic adipose niche. Communications Biology. 2023 Jul 21;6(1):761. PMCID: PMC10361964</p>
+        </div>
+
+      </ul>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section-card publications">
+      <h2><i class="fas fa-book-open"></i> Publications</h2>
+      <p>For the complete list, visit <a href="https://www.ncbi.nlm.nih.gov/myncbi/rongbin.zheng.1/bibliography/public/" target="_blank">NCBI My Bibliography</a>.</p>
+      <ol>
+        # co-first authors, * co-correspondence
+        <li><b>Zheng R#</b>, Zhang Y#, Tsuji T, Gao X, Wagner A, Yosef N, Chen H, Zhang L, Tseng YH, Chen K. MEBOCOST: Metabolite-mediated Cell Communication Modeling by Single Cell Transcriptome. Nucleic Acids Res. (2025 Accepted). https://www.biorxiv.org/content/10.1101/2022.05.30.494067v2 </li>
+        <li>Li Y#, Wu X#, Sheng C#, Liu H#, Liu H#, Tang Y#, Liu C#, Ding Q#, Xie B#, Xiao X#, <b>Zheng R#</b>, Yu Q#, Guo Z, Ma J, Wang J, Gao J, Tian M, Wang W, Zhou J, Jiang L, Gu M, Shi S, Paull M, Yang G, Yang W, Landau S, Bao X, Hu X*, Liu XS*, Xiao T*. IGSF8 is an innate immune checkpoint and cancer immunotherapy target. Cell. 2024 May 23;187(11):2703-2716.e23.  </li>
+        <li>Shamsi F#, <b>Zheng R#</b>, Ho LL, Chen K*, Tseng YH*. Comprehensive analysis of intercellular communication in the thermogenic adipose niche. Commun Biol. 2023 Jul 21;6(1):761. doi: 10.1038/s42003-023-05140-2. PMID: 37479789; PMCID: PMC10361964. </li>
+        <li>Lv J, Meng S, Gu Q, <b>Zheng R</b>, Gao X, Kim JD, Chen M, Xia B, Zuo Y, Zhu S, Zhao D, Li Y, Wang G, Wang X, Meng Q, Cao Q, Cooke JP, Fang L, Chen K, Zhang L. Epigenetic landscape reveals MECOM as an endothelial lineage regulator. Nat Commun. 2023 Apr 25;14(1):2390. doi: 10.1038/s41467-023-38002-w. PMID: 37185814; PMCID: PMC10130150. </li>
+        <li>Wang Y, Zong H, Yang F, Tong Y, Xie Y, Zhang Z, Huang H, <b>Zheng R</b>, Wang S, Huang D, Tan F, Cheng S, Crabbe MJC, Zhang X. A knowledge empowered explainable gene ontology fingerprint approach to improve gene functional explication and prediction. iScience. 2023 Mar 7;26(4):106356. doi: 10.1016/j.isci.2023.106356. PMID: 37091235; PMCID: PMC10119605. </li>
+        <li>Han T, Wang X, Shi S, Zhang W, Wang J, Wu Q, Li Z, Fu J, <b>Zheng R</b>, Zhang J, Tang Q, Zhang P, Wang C. Cancer Cell Resistance to IFNγ Can Occur via Enhanced Double-Strand Break Repair Pathway Activity. Cancer Immunol Res. 2023 Mar 1;11(3):381-398. doi: 10.1158/2326-6066.CIR-22-0056. PMID: 36629846. </li>
+        <li>Cui K, Gao X, Wang B, Wu H, Arulsamy K, Dong Y, Xiao Y, Jiang X, Malovichko MV, Li K, Peng Q, Lu YW, Zhu B, <b>Zheng R</b>, Wong S, Cowan DB, Linton M, Srivastava S, Shi J, Chen K, Chen H. Epsin Nanotherapy Regulates Cholesterol Transport to Fortify Atheroma Regression. Circ Res. 2023 Jan 6;132(1):e22-e42. doi: 10.1161/CIRCRESAHA.122.321723. Epub 2022 Nov 29. PMID: 36444722; PMCID: PMC9822875. </li>
+        <li>Gupta K, Wang G, Zhang S, Gao X, <b>Zheng R</b>, Zhang Y, Meng Q, Zhang L, Cao Q, Chen K. StripeDiff: Model-based algorithm for differential analysis of chromatin stripe. Sci Adv. 2022 Dec 9;8(49):eabk2246. doi: 10.1126/sciadv.abk2246. Epub 2022 Dec 7. PMID: 36475785; PMCID: PMC9728969. </li>
+        <li>Ding D, <b>Zheng R</b>, Tian Y, Jimenez R, Hou X, Weroha SJ, Wang L, Shi L, Huang H. Retinoblastoma protein as an intrinsic BRD4 inhibitor modulates small molecule BET inhibitor sensitivity in cancer. Nat Commun. 2022 Oct 23;13(1):6311. doi: 10.1038/s41467-022-34024-y. PMID: 36274096; PMCID: PMC9588789. </li>
+        <li>Wang Y, Tong Y, Zhang Z, <b>Zheng R</b>, Huang D, Yang J, Zong H, Tan F, Xie Y, Huang H, Zhang X. ViMIC: a database of human disease-related virus mutations, integration sites and cis-effects. Nucleic Acids Res. 2022 Jan 7;50(D1):D918-D927. doi: 10.1093/nar/gkab779. PMID: 34500462; PMCID: PMC8728280. </li>
+        <li>Sun D, Wang J, Han Y, Dong X, Ge J, <b>Zheng R</b>, Shi X, Wang B, Li Z, Ren P, Sun L, Yan Y, Zhang P, Zhang F, Li T, Wang C. TISCH: a comprehensive web resource enabling interactive single-cell transcriptome visualization of tumor microenvironment. Nucleic Acids Res. 2021 Jan 8;49(D1):D1420-D1430. doi: 10.1093/nar/gkaa1020. PMID: 33179754; PMCID: PMC7778907. </li>
+        <li><b>Zheng R#</b>, Dong X#, Shi X, Zhang X*, Meyer CA*, Cistrome Data Browser and Toolkit: Analyzing human and mouse genomic data using compendia of ChIP-seq and chromatin accessibility data. Quantitative Biology, 8, no. 3 (2020): 267-276. </li>
+        <li>Li W, Zhang N, Jin C, Long MD, Rajabi H, Yasumizu Y, Fushimi A, Yamashita N, Hagiwara M, Zheng R, Wang J, Kui L, Singh H, Kharbanda S, Hu Q, Liu S, Kufe D. MUC1-C drives stemness in progression of colitis to colorectal cancer. JCI Insight. 2020 Jun 18;5(12):e137112. doi: 10.1172/jci.insight.137112. PMID: 32427590; PMCID: PMC7406273. </li>
+        <li>Chen CH, <b>Zheng R</b>, Tokheim C, Dong X, Fan J, Wan C, Tang Q, Brown M, Liu JS, Meyer CA, Liu XS. Determinants of transcription factor regulatory range. Nat Commun. 2020 May 18;11(1):2472. doi: 10.1038/s41467-020-16106-x. PMID: 32424124; PMCID: PMC7235260. </li>
+        <li>Qin Q, Fan J, <b>Zheng R</b>, Wan C, Mei S, Wu Q, Sun H, Brown M, Zhang J, Meyer CA, Liu XS. Lisa: inferring transcriptional regulators through integrative modeling of public chromatin accessibility and ChIP-seq data. Genome Biol. 2020 Feb 7;21(1):32. doi: 10.1186/s13059-020-1934-6. PMID: 32033573; PMCID: PMC7007693. </li>
+        <li>Li S, Wan C, <b>Zheng R</b>, Fan J, Dong X, Meyer CA, Liu XS. Cistrome-GO: a web server for functional enrichment analysis of transcription factor ChIP-seq peaks. Nucleic Acids Res. 2019 Jul 2;47(W1):W206-W211. doi: 10.1093/nar/gkz332. PMID: 31053864; PMCID: PMC6602521. </li>
+        <li><b>Zheng R#</b>, Wan C#, Mei S, Qin Q, Wu Q, Sun H, Chen CH, Brown M, Zhang X*, Meyer CA*, Liu XS*. Cistrome Data Browser: expanded datasets and new tools for gene regulatory analysis. Nucleic Acids Res. 2019 Jan 8;47(D1):D729-D735. doi: 10.1093/nar/gky1094. PMID: 30462313; PMCID: PMC6324081. </li>
+        <li>Wang Y, Wang Y, Wang S, Tong Y, Jin L, Zong H, <b>Zheng R</b>, Yang J, Zhang Z, Ouyang E, Zhou M, Zhang X. GIDB: a knowledge database for the automated curation and multidimensional analysis of molecular signatures in gastrointestinal cancer. Database (Oxford). 2019 Jan 1;2019:baz051. doi: 10.1093/database/baz051. PMID: 31089686; PMCID: PMC6517830. </li>
+        <li>Mei S, Meyer CA, <b>Zheng R</b>, Qin Q, Wu Q, Jiang P, Li B, Shi X, Wang B, Fan J, Shih C, Brown M, Zang C, Liu XS. Cistrome Cancer: A Web Resource for Integrative Gene Regulation Modeling in Cancer. Cancer Res. 2017 Nov 1;77(21):e19-e22. doi: 10.1158/0008-5472.CAN-17-0327. PMID: 29092931; PMCID: PMC5826647. </li>
+        <li>Mei S, Qin Q, Wu Q, Sun H, <b>Zheng R</b>, Zang C, Zhu M, Wu J, Shi X, Taing L, Liu T, Brown M, Meyer CA, Liu XS. Cistrome Data Browser: a data portal for ChIP-Seq and chromatin accessibility data in human and mouse. Nucleic Acids Res. 2017 Jan 4;45(D1):D658-D662. doi: 10.1093/nar/gkw983. Epub 2016 Oct 26. PMID: 27789702; PMCID: PMC5210658. </li>
+        <li>Liu S, Jiang L, Zhong T, Kong S, <b>Zheng R</b>, Kong F, Zhang C, Zhang L, An L. Effect of Acrylamide on Oocyte Nuclear Maturation and Cumulus Cells Apoptosis in Mouse In Vitro. PLoS One. 2015 Aug 14;10(8):e0135818. doi: 10.1371/journal.pone.0135818. PMID: 26275143; PMCID: PMC4537141. </li>
+        <li>Liu S*, Yu C, Cheng D, Han X, Jiang L, <b>Zheng R</b>, Meng X, Zhang T, Huo L. Aroclor 1254 impairs the development of ovarian follicles by inducing the apoptosis of granulosa cells. Toxicology Research. 2015;4(2):302-10. </li>
+
+      </ol>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section-card">
+      <h2><i class="fas fa-code"></i> Software & Tools</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/zhengrongbin/MEBOCOST" target="_blank">MEBOCOST</a>
+          <p>MEBOCOST stands for Metabolic Cell-Cell Communication Analysis by Single Cell Transcriptome, which is a Python-based computational tool for inferring metabolic cell-cell communications using single-cell RNA-seq data. Briefly, in the first step, MEBOCOST imputes the activity of metabolite biosysthesis pathways and consuming pathways using metabolic enzymes. The genes of enzymes were collected from Human Metabolome Database (HMDB). Next, MEBOCOST identify significant communication events between sender and receiver cells for those the senders have highly activate metabolite biosythesis pathway, meanwhile, receivers have highly expressed sensors to the metabolite.</p>
+        </li>
+        <br>
+        <li>
+          <a href="http://cistrome.org/db" target="_blank">Cistrome Data Browser</a>
+          <p>A collection and visualization of public human and mouse ChIP-seq / DNase-seq / ATAC-seq data. You can search the published epigenomics datasets with uniformed processing with interesting downstream analysis, including quality control, peak distribution, putative target genes, and motif enrichment.</p>
+        </li>
+        <br>
+        <li>
+          <a href="http://dbtoolkit.cistrome.org" target="_blank">Cistrome DB Toolkit</a>
+          <p>A web-based toolkit allows you to fully use CistromeDB dataset by anwsering three questions: (1) What factors target your gene of interest? (2) What factors bind in your interval? (3) What factors have a significant binding overlap with your peak set?</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section-card">
+      <h2><i class="fas fa-award"></i> Honors & Awards</h2>
+      <ul>
+        <li>2021 NextGen Accelerator Award, Cell Discovery Network, Boston Children's Hospital, US</li>
+        <li>2020  Outstanding Graduates in Shanghai   Tongji University, China</li>
+        <li>2019  Pacemaker to Outstanding Students   Tongji University, China</li>
+        <li>2019  National Scholarship  Tongji University, China</li>
+        <li>2017  Outstanding Doctoral Student Scholarship  Tongji University, China</li>
+      </ul>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section-card">
+      <h2><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h2>
+      <ul>
+        <li>Bioinformatics Training TA, Tongji University (2017, 2019)</li>
+        <li>Dragon Star Course TA, Beijing (2019)</li>
+      </ul>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="section-card">
+      <h2><i class="fas fa-microphone"></i> Presentations</h2>
+      <h3>Teaching Experience</h2>
+      <ul>
+        <li>Bioinformatics Training Teaching Assitant, Tongji University (2017, 2019)</li>
+        <li>Dragon Star Course Teaching Assitant, Beijing (2019)</li>
+      </ul>
+      <br>
+      <h3>Oral Presentation</h3>
+      <ol>
+        <li>“Computational Models on Metabolite Mediated Intercellular Communications”, the PQG seminar series at Harvard T.H. Chan School of Public Health (October 2023)</li>
+        <li>“MEBOCOST: Metabolic Cell-Cell Communication Modeling by Single Cell Transcriptome”, the 4th Emerging Scholars in Genome Sciences Symposium at the University of Virginia School of Medicine (September 2023)</li>
+        <li>“MEBOCOST: Metabolic Cell-Cell Communication Modeling by Single Cell Transcriptome”, the 18th SCBA International Symposium, Boston, MA, US (July 2022)</li>
+      </ol>
+      <br>
+      <h3>Poster Presentation</h3>
+      <ol>
+        <li>“MEBOCOST: Metabolic Cell-Cell Communication Modeling by Single Cell Transcriptome”, the 2023 Retreat of Broad Institute (December 2023). Selected as Top 10 Poster Winners among over 400 posters.</li>
+        <li>“The Impact of Promoter and TAD Types on Gene Regulation” Scientific and Technical Advances in Cancer Immunology, Cold Spring Harbor Asia (June 2019)</li>
+        <li>“The Impact of Promoter Types on Gene Regulation” The Fourteenth International Bioinformatics Workshop (August 2019)</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('nav.tabs button').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('nav.tabs button').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.section-card').forEach(sec => sec.classList.remove('active'));
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
