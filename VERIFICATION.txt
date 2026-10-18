@@ -1,0 +1,13 @@
+Verification report
+
+PASS: All six required HTML pages are present.
+PASS: 74 local link, image, stylesheet, script and fragment references resolve.
+PASS: HTML IDs are unique within each page.
+PASS: Each navigation marks exactly one current page.
+PASS: Original annotated homepage image preserved byte for byte.
+PASS: Only HTML, CSS, vanilla JavaScript and a local image; no build/runtime packages.
+
+11 distinct external URLs retained from draft; remote availability not tested.
+Browser visual and interactive testing not performed.
+Portrait, public contact, recruitment status and factual content review remain pending.
+No files were uploaded to the live repository.
