@@ -188,6 +188,7 @@ p {
 
 .hero {
   background:linear-gradient(155deg,#102c46 0%,#10394c 65%,#116b72 125%);
+  /*background: #E5F5F6;*/
   color:white;
   padding:93px 0 60px
 }
